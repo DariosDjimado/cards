@@ -1,0 +1,162 @@
+@import "compass/reset";
+
+
+$card-header-bg: #00BCD4;
+$card-body-bg: #03A9F4;
+$card-footer-bg: #0097A7;
+
+
+$card-header-height: 50px;
+$card-body-height: 100px;
+$card-footer-min-footer: 50px;
+
+
+
+html,body{
+	width: 100%;
+	height: 100%;
+	font-size: 12px;
+	background-color: #f5f5f5;
+	color: #fff;
+	overflow: hidden;
+}
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.card1{
+	position: relative;
+	height: 350px;
+	width: 300px;
+	background-color: #369;
+	transition: transform .5s;
+	overflow: hidden;
+
+	.card-icon{
+		position: absolute;
+		display: flex;
+		align-items: center;
+		
+		width: 24px; height: 24px;
+		color: #fff;
+		
+		text-decoration:none;
+		border: none;
+		cursor: pointer;
+		z-index: 999;
+
+		&.left{
+			margin-left: 16px;
+			left: 0;
+		}
+		&.right{
+			margin-right: 24px;
+			right: 0;
+		}
+	}
+
+	.card-header, .card-body, .card-footer{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: inherit;
+
+	}
+
+	.card-header{
+		position: relative;
+		height: $card-header-height;
+		background-color: $card-header-bg;
+		z-index: 2;
+	}
+	.card-body{
+		position: absolute;
+		top: 0;right: 0;left: 0;bottom: 0;
+		height: 100%;
+		background-color: $card-body-bg;
+		background-size: cover;
+		overflow: hidden;
+		z-index: 1;
+		transform: scale(1) translateZ(0);
+
+		div,img{
+			position: absolute;
+			left: 0;right: 0;top: 0;bottom: 0;
+		}
+		img{
+			z-index: 1;
+		}
+		div{
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: center;
+			align-items: center;
+
+			margin: 10%;
+			z-index: 3;
+
+			.card-body-title{
+				margin: 10px;
+				font-size: 24px;
+			}
+			.card-body-text{
+				font-size: 16px;
+				line-height: 24px;
+				text-align: center;
+			}
+		}
+	}
+	.card-footer{
+		flex-flow: column nowrap;
+		position: absolute;
+		bottom: 0;left: 0;right: 0;
+		min-height: $card-footer-min-footer;
+		
+		background-color: rgba(0,0,0,.3);
+		z-index: 1;
+		transition: transform .3s linear, background-color .3s linear;
+		transform: translateY(calc(100% - 30px));
+
+		#card-footer-open{
+			width: 100%;
+			text-align: center;
+			height: $card-footer-min-footer;
+			color: #fff;
+			cursor:pointer;
+			outline:none;
+			border: none;
+			background:transparent;
+			.card-footer-icon{
+				transform: rotate(0);
+				transition: transform .3s;
+
+			}
+			&.rotate .card-footer-icon{
+				transform:rotate(180deg)
+			}
+		}
+		.card-footer-text{
+			margin:0 30px 10px 30px;
+			text-align: center;
+			font-size: 16px;
+			line-height: 24px;
+		}
+		
+	}
+
+	&.footer-open .card-footer{
+		transform: translateY(0);
+		background-color: $card-footer-bg;
+	}
+	&:not(.footer-open):hover{
+
+		.card-body{
+			transform: scale(1.2);
+
+		}
+		.card-footer{
+			transform: translateY(calc(100% - 50px));
+		}
+	}
+}
