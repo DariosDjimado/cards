@@ -1,6 +1,3 @@
-@import "compass/reset";
-
-
 $card-header-bg: #00BCD4;
 $card-body-bg: #03A9F4;
 $card-footer-bg: #0097A7;
@@ -10,28 +7,15 @@ $card-header-height: 50px;
 $card-body-height: 100px;
 $card-footer-min-footer: 50px;
 
-
-
-html,body{
-	width: 100%;
-	height: 100%;
-	font-size: 12px;
-	background-color: #f5f5f5;
-	color: #fff;
-	overflow: hidden;
-}
-body{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
 .card1{
 	position: relative;
 	height: 350px;
 	width: 300px;
+	color: #fff;
 	background-color: #369;
 	transition: transform .5s;
 	overflow: hidden;
+	box-sizing: border-box;
 
 	.card-icon{
 		position: absolute;
@@ -40,7 +24,6 @@ body{
 		
 		width: 24px; height: 24px;
 		color: #fff;
-		
 		text-decoration:none;
 		border: none;
 		cursor: pointer;
@@ -122,7 +105,6 @@ body{
 			width: 100%;
 			text-align: center;
 			height: $card-footer-min-footer;
-			color: #fff;
 			cursor:pointer;
 			outline:none;
 			border: none;
