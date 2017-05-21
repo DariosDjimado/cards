@@ -1,11 +1,11 @@
 /** card 1 **/
-@import url("/src/card1/style.css");
+@import url("/cards/src/card1/style.css");
 
 /** card 2 **/
-@import url("/src/card2/style.css");
+@import url("/cards/src/card2/style.css");
 
 /** card 3**/
-@import url("/src/card3/style.css");
+@import url("/cards/src/card3/style.css");
 
 /** card 4**/
-@import url("/src/card4/style.css");
+@import url("/cards/src/card4/style.css");
