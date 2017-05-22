@@ -1,0 +1,87 @@
+$card-width:300px;
+$card-height: 200px;
+$card-bg: #00BCD4;
+
+.card6{
+  height: $card-height;
+  width: $card-width;
+  background-color: $card-bg;
+
+  .card-body{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    .card-body-front, .card-body-back{
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height:100%;
+    }
+    .card-body-back{
+      width: 100%;
+      z-index: 1;
+      .card-body-back-outline{
+        stroke-dasharray: 210;
+        stroke-dashoffset: -25;
+        stroke-width: 3px;
+        stroke: #fff;
+      }
+    }
+    .card-body-front{
+      width: 260px;
+      left: 20px;top: 0;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 20px;
+      text-align: center;
+      z-index: 2;
+      .card-body-front-link{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column nowrap;
+        height: 160px;        
+        width: 100%;
+        text-decoration: none;
+        color:#fff;
+        strong{
+          padding-top: 20px;
+          font-size: 12px;
+        }
+      }
+    }
+    
+  }
+  
+  &:hover{
+    .card-body-back{
+      .card-body-back-outline{
+        animation: outlineclose .3s  linear forwards;
+      }
+    }
+  }
+
+}
+
+@keyframes outlineclose{
+  0% {
+    stroke-dasharray: 230 230;
+    stroke-dashoffset: -25;
+    stroke-width: 5px;
+  }
+  50%{
+    stroke-dasharray: 500;
+    stroke-dashoffset: 0;
+    stroke-width: 3px;
+    fill: rgba(0,0,0,.1);
+  }
+  100%{
+    stroke-dasharray: 920;
+    stroke-dashoffset: 0;
+    stroke-width: 2px;
+    fill: rgba(0,0,0,.1);
+
+  }
+}
