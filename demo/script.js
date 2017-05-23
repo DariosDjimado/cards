@@ -9,9 +9,16 @@ footer.addEventListener('click', (e)=>{
 /** card 2**/
 let button=document.querySelector('.card2 .card-body-icons');
 button.addEventListener('click',selectArticle,true);
-
 function selectArticle(e){
 	e.preventDefault();
 	e.stopPropagation();
 	this.classList.toggle("checked");
+}
+
+/** card7 **/
+let card=document.querySelector('#card7');
+card.addEventListener('click',sendGift,true)
+function sendGift(e){
+	e.preventDefault();
+	this.classList.toggle('selected');
 }

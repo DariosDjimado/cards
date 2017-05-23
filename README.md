@@ -1,6 +1,6 @@
 # Cards
 
-Material and flat cards
+Collections of cards
 
 see it here : https://dariosdjimado.github.io/cards/
  
