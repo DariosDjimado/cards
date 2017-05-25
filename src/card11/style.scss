@@ -1,0 +1,134 @@
+$card-back-width: 600px;
+$card-back-height: 450px;
+
+$card-width: 300px;
+$card-height: 350px;
+
+.card11{
+  height: $card-height;
+  width: $card-width;
+  border:2px solid rgba(0,0,0,.1);
+  @media only screen and (min-width: 450px){
+    height: $card-back-height;
+    width: $card-back-width;
+  }
+  background-color: #f5f5f5;
+  .card-body{
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+    .card-body-back{
+      display: none;
+      @media only screen and (min-width: 450px){
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height:100%;
+        width: 100%;
+      }
+      
+    }
+    .card-body-front{
+      position: absolute;
+      display: flex;
+      flex-flow:column nowrap;
+      left: 0;
+      top: 0;
+      width: $card-width;
+      height:$card-height;
+      color: #333;
+      background-color: #fff;
+
+      .card-body-front-header, .card-body-front-footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height:50px;
+        background-color: #fff;
+        text-transform: uppercase;
+      }
+      .card-body-front-header{
+        display: flex;
+        align-items: center;
+        h1{
+          font-size: 20px;
+          padding: 0 10px;
+        }
+      }
+      .card-body-front-body{
+        position: relative;
+        display: flex;
+        flex-flow:column nowrap;
+        flex: 1 1 auto;
+
+        h2{
+          font-size:14px;
+          line-height: 18px;
+          letter-spacing: 1px;
+          font-weight:700;
+          text-align: center;
+          text-transform: uppercase;
+        }
+        div{
+          position: relative;
+          display: flex;
+          align-items: center;
+          flex: 1 1 auto;
+          img{
+            margin:0 30px;
+            width: 100px;
+            height: 200px;
+          }
+          span{
+            position: relative;
+            color: #8BC34A;
+            letter-spacing:0;
+            font-size:50px;
+            font-weight:700;
+            &:before{
+              position: absolute;
+              content: '12';
+              top: 0;
+              right: 0;
+              width: 1px;
+              font-size: 16px;
+            }
+            &:after{
+              position: absolute;
+              content: '';
+              top: -5px;
+              right: -20px;
+              width: 2px;
+              height: 30px;
+              background-color: red;
+              transform-origin: 0 0;
+              transform: rotateZ(45deg);
+            }
+          }
+        }
+      }
+      .card-body-front-footer{
+        a{
+          font-size:12px;
+          font-weight:700;
+          padding: 10px;
+          color: #fff;
+          border-radius: 2px;
+          text-decoration: none;
+          background-color: #0D47A1;
+          &:hover,&:focus{
+            background-color: #42A5F5;
+          }
+        }
+      }
+      @media only screen and (min-width: 450px){
+        margin:50px auto auto 50px;
+        box-shadow: 2px 2px 5px rgba(0,0,0,.9);
+      }
+    }
+  }
+}
