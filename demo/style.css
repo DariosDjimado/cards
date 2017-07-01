@@ -126,9 +126,9 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   max-width: 81.25rem;
   min-height: 18.75rem;
@@ -142,6 +142,9 @@ body {
         -ms-flex-flow: row wrap;
             flex-flow: row wrap;
     padding: 3rem;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 .demo-main .demo-card {
@@ -252,7 +255,5 @@ body {
   height: 4rem;
   background-color: #00BCD4;
 }
-
-/*# sourceMappingURL=style.css.map */
 
 /*# sourceMappingURL=style.css.map */
