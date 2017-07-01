@@ -1,0 +1,97 @@
+.card13 {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  width: 300px;
+  height: 300px;
+  color: #fff;
+  background-color: #333333;
+  text-transform: uppercase;
+  font-size: 16px;
+  overflow: hidden;
+  -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+          box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+.card13 .card-header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.card13 .card-body {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+.card13 .card-body .card-body-main, .card13 .card-body .card-body-aside {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.card13 .card-body .card-body-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  line-height: 28px;
+  z-index: 2;
+}
+.card13 .card-body .card-body-main p {
+  padding: 0 20px;
+}
+.card13 .card-body .card-body-aside {
+  background-color: transparent;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+  -webkit-transform: translateX(50px);
+          transform: translateX(50px);
+  z-index: 1;
+}
+.card13 .card-body .card-body-aside svg {
+  height: 250px;
+  width: 300px;
+}
+.card13:hover .card-body .card-body-aside {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+/*# sourceMappingURL=style.css.map */

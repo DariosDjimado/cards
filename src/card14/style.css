@@ -1,0 +1,78 @@
+.card14 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  height: 300px;
+  width: 300px;
+  color: #fff;
+  -webkit-box-shadow: 1px 1px 7px 1px rgba(0, 0, 0, 0.41);
+          box-shadow: 1px 1px 7px 1px rgba(0, 0, 0, 0.41);
+}
+.card14 .card-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  height: 150px;
+  width: 100%;
+  text-transform: uppercase;
+  background-color: #03A9F4;
+}
+.card14 .card-top:after {
+  display: block;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: -25px;
+  content: '';
+  width: 50px;
+  height: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  background-color: #fff;
+}
+.card14 .card-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 150px;
+  width: 100%;
+  background-color: #f5f5f5;
+}
+.card14 .card-bottom button {
+  padding: 10px;
+  min-width: 80px;
+  background-color: #03A9F4;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  -webkit-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2);
+  -webkit-transition: -webkit-box-shadow .1s;
+  transition: -webkit-box-shadow .1s;
+  transition: box-shadow .1s;
+  transition: box-shadow .1s, -webkit-box-shadow .1s;
+}
+.card14 .card-bottom button:hover {
+  -webkit-box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.3);
+          box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+/*# sourceMappingURL=style.css.map */
